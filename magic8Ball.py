@@ -4,6 +4,7 @@ import time
 import os
 from rich import print
 from rich.console import Console
+from matplotlib import style
 
 
 def answer(question: str):
@@ -39,7 +40,7 @@ logo = """
 while True: 
     console = Console()
     console.print(logo, style="bold green")
-    question = console.input("The fuck do you want to know: ", style="bold bright_red")
+    question = console.input("The fuck do you want to know: ")
     brutal_answer = answer(question)
     console.print("\n🎱", brutal_answer, style="bold red")
     input("\nPress Enter to ask another question...")
